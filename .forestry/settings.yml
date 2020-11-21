@@ -9,6 +9,10 @@ sections:
   label: Pages
   create: all
   match: "**/*"
+- type: document
+  path: _data/config.json
+  label: Settings
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
