@@ -1,43 +1,43 @@
 ---
-id: home
 label: Home
+hide_body: true
 fields:
+- type: textarea
+  name: hero
+  label: Hero Text
+  default: ''
+  config:
+    wysiwyg: true
+    schema:
+      format: html
+- type: field_group_list
+  name: projects
+  label: Projects
+  default: ''
+  fields:
   - type: textarea
-    name: hero
-    label: Hero Text
+    name: description
+    label: Description
     default: ''
     config:
       wysiwyg: true
       schema:
         format: html
-  - type: field_group_list
-    name: projects
-    label: Projects
+  - type: file
+    name: image
+    label: Image
     default: ''
-    fields:
-      - type: textarea
-        name: description
-        label: Description
-        default: ''
-        config:
-          wysiwyg: true
-          schema:
-            format: html
-      - type: file
-        name: image
-        label: Image
-        default: ''
-  - name: permalink
-    type: text
-    label: Permalink
-    config:
-      required: true
-  - name: layout
-    type: text
-    hidden: true
-    label: layout
-    default: home
-    config:
-      required: true
-name: home.yml
-hide_body: true
+- name: permalink
+  type: text
+  label: Permalink
+  config:
+    required: true
+- name: layout
+  type: text
+  hidden: true
+  label: layout
+  default: home
+  config:
+    required: true
+pages:
+- content/pages/home.md
