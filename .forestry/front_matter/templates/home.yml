@@ -10,6 +10,23 @@ fields:
       wysiwyg: true
       schema:
         format: html
+  - type: field_group_list
+    name: projects
+    label: Projects
+    default: ''
+    fields:
+      - type: textarea
+        name: description
+        label: Description
+        default: ''
+        config:
+          wysiwyg: true
+          schema:
+            format: html
+      - type: file
+        name: image
+        label: Image
+        default: ''
   - name: permalink
     type: text
     label: Permalink
